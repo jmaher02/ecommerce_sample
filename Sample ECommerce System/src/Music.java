@@ -28,7 +28,7 @@ public class Music extends Product
 	{
 		String display = "\nITEM " + getItemNumber() + " " + getName() + "\t" + printPrice() + "\n";
 		
-		display += "\n" + showTracks() + "\n";
+		display += showTracks();
 		display += "RELEASED: " + released + "\n";
 
 		return display;
@@ -40,7 +40,7 @@ public class Music extends Product
 		
 		for(int i = 0; i < tracks.length; i++)
 		{
-			trackOutput += i + ".) " + tracks[i] + "/n";
+			trackOutput += "\t" + (i+1) + ".) " + tracks[i] + "\n";
 		}
 		
 		return trackOutput;
@@ -48,7 +48,7 @@ public class Music extends Product
 	
 	public String showFeaturedPicture()
 	{
-		return "";
+		return getName();
 	}
 
 }
