@@ -50,7 +50,11 @@ public class ECommerceMain
 		Book book2 = new Book(200002, "The Girl with the Dragon Tattoo", 10.99, "Steig Larsson",
 				465, 9780307949486L);
 		
-		//System.out.println(book2.displayCharacteristics());
+		String[] songs = {"Rotten to the Core", "Evil Like Me", "If Only", "Be Our Guest", "Set It Off"};
+		Music music1 = new Music(300001, "Descendants TV Movie Soundtrack", 14.99, "Various Artists", 
+				2015, songs);
+		
+		System.out.println(music1.displayCharacteristics());
 		//System.out.println(book2.showFeaturedPicture());
 		
 		

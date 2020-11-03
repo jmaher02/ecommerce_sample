@@ -15,14 +15,35 @@ public class Music extends Product
 	private int released;
 	private String[] tracks;
 	
-	public Music(int itemNum, String name, double price)
+	public Music(int itemNum, String title, double price, String artist, int year, String[] songs)
 	{
-		super(itemNum, price, name);
+		super(itemNum, price, title + " BY " + artist);
+		this.title = title;
+		this.artist = artist; 
+		released = year;
+		tracks = songs;
 	}
 
 	public String displayCharacteristics()
 	{
-		return "";
+		String display = "\nITEM " + getItemNumber() + " " + getName() + "\t" + printPrice() + "\n";
+		
+		display += "\n" + showTracks() + "\n";
+		display += "RELEASED: " + released + "\n";
+
+		return display;
+	}
+
+	private String showTracks()
+	{
+		String trackOutput = "";
+		
+		for(int i = 0; i < tracks.length; i++)
+		{
+			trackOutput += i + ".) " + tracks[i] + "/n";
+		}
+		
+		return trackOutput;
 	}
 	
 	public String showFeaturedPicture()
