@@ -56,6 +56,8 @@ public class ECommerceMain
 		String[] songs2 = {"Shameless", "Living Proof", "My Oh My", "Senorita", "Liar", "Bad Kind of Butterflies", "Easy"};
 		Music music2 = new Music(300002, "Romance", 21.99, "Camila Cabello", 2019, songs2);
 		
+		
+		
 		System.out.println(music2.displayCharacteristics());
 		System.out.println(music2.showFeaturedPicture());
 		
