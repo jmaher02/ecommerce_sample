@@ -14,18 +14,27 @@ public class Art extends Product
 	private String title, artist, medium;
 	private int size;
 
-	public Art(int itemNum, String name, double price)
+	public Art(int itemNum, String artTitle, String name, String artMedium, double price, int size)
 	{
-		super(itemNum, price, name);
+		super(itemNum, price, artTitle + " BY " + name);
+		title = artTitle;
+		artist = name;
+		medium = artMedium;
+		this.size = size;
 	}
 
 	public String displayCharacteristics()
 	{
-		return "";
+		String display = "\nITEM " + getItemNumber() + " " + getName() + "\t" + printPrice() + "\n";
+
+		display += "\tMEDIUM: " + medium + "\n";
+		display += "\tSIZE: " + size + "\n";
+		
+		return display;
 	}
 	
 	public String showFeaturedPicture()
 	{
-		return "";
+		return getName() + "\n";
 	}
 }

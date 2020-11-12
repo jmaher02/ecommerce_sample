@@ -51,15 +51,16 @@ public class ECommerceMain
 				465, 9780307949486L);
 		
 		String[] songs = {"Rotten to the Core", "Evil Like Me", "If Only", "Be Our Guest", "Set It Off"};
-		Music music1 = new Music(300001, "Descendants TV Movie Soundtrack", 14.99, "Various Artists", 
+		Music music1 = new Music(400001, "Descendants TV Movie Soundtrack", 14.99, "Various Artists", 
 				2015, songs);
 		String[] songs2 = {"Shameless", "Living Proof", "My Oh My", "Senorita", "Liar", "Bad Kind of Butterflies", "Easy"};
-		Music music2 = new Music(300002, "Romance", 21.99, "Camila Cabello", 2019, songs2);
+		Music music2 = new Music(400002, "Romance", 21.99, "Camila Cabello", 2019, songs2);
 		
+		Art art1 = new Art(300001, "Mona Lisa", "Leaonardo DaVinci", "Oil on Canvas", 4500,18);
+		Art art2 = new Art(300002, "Meadow Lake", "Bob Ross", "Acrylic on Canvas", 750, 37);
 		
-		
-		System.out.println(music2.displayCharacteristics());
-		System.out.println(music2.showFeaturedPicture());
+		System.out.println(art1.displayCharacteristics());
+		System.out.println(art1.showFeaturedPicture());
 		
 		
 		
@@ -73,6 +74,8 @@ public class ECommerceMain
 		allBooks.add(book2);
 		
 		ArrayList<Product> allArt = new ArrayList<Product>();
+		allArt.add(art1);
+		allArt.add(art2);
 		
 		ArrayList<Product> allMusic = new ArrayList<Product>();
 		allMusic.add(music1);
@@ -125,6 +128,7 @@ public class ECommerceMain
 			case '1': 	category = 1; break;
 			case '2': 	category = 2; break;
 			case '3': 	category = 3; break;
+			case '4':   category = 4; break;
 			case 'A': 	System.out.println("\n\n=================");
 						System.out.println("Your Account: ");
 						System.out.println("=================");
@@ -141,7 +145,7 @@ public class ECommerceMain
 				System.out.println("View Products: ");
 				System.out.println("=================");
 				ECommerceMain.displayCategoryProducts(allProducts[category]);
-				System.out.println("Provide the item number for more details. ");
+				System.out.println("\nProvide the item number for more details. ");
 				System.out.println("OR Press (A) for Account Details");
 				System.out.println("OR Press (B) to go back");
 				

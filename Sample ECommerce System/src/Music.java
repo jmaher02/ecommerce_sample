@@ -48,7 +48,7 @@ public class Music extends Product
 	
 	public String showFeaturedPicture()
 	{
-		return getName();
+		return getName() + "\n";
 	}
 
 }
